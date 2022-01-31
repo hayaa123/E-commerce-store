@@ -143,7 +143,7 @@ class Product(models.Model) :
     )
 
     class Meta:
-        ordering = _("-created_at"),
+        ordering = "-created_at",
         verbose_name =_("Product"),
         verbose_name_plural =_("Products")
     def get_absolute_url(self):
@@ -158,7 +158,7 @@ class ProductSpecificationValue(models.Model):
     """
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     specification = models.ForeignKey(ProductSpecification,on_delete=models.RESTRICT)
-
+    value = models.CharField(max_length=225,default="not available")
     class Meta :
         verbose_name  = _("specification_Value")
         verbose_name_plural = _("specification_Values")
