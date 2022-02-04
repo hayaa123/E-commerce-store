@@ -29,6 +29,6 @@ class ProductSpecificationValueAdmin(admin.TabularInline):
 class ProductAdmin(admin.ModelAdmin):
     inlines= [
         ProductImageInline,
-        ProductSpecificationValueAdmin
+        ProductSpecificationValueAdmin,
     ]
 
